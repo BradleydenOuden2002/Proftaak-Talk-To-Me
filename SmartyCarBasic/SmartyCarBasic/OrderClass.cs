@@ -36,5 +36,10 @@ namespace SmartyCarBasic
             databaseConnection.Close();
             return product;
         }
+        public double PriceCal(int AmountOrder, double selecteditempricedouble)
+        {
+            double total = AmountOrder * selecteditempricedouble;
+            return total;
+        }
     }
 }

@@ -41,6 +41,10 @@ namespace SmartyCarBasic
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LbItemSelected = new System.Windows.Forms.Label();
             this.LbSelecteditemPrice = new System.Windows.Forms.Label();
+            this.LbAmountOrder = new System.Windows.Forms.Label();
+            this.BtAdd = new System.Windows.Forms.Button();
+            this.BtSup = new System.Windows.Forms.Button();
+            this.LbTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button5
@@ -144,11 +148,53 @@ namespace SmartyCarBasic
             this.LbSelecteditemPrice.Size = new System.Drawing.Size(0, 17);
             this.LbSelecteditemPrice.TabIndex = 15;
             // 
+            // LbAmountOrder
+            // 
+            this.LbAmountOrder.AutoSize = true;
+            this.LbAmountOrder.Location = new System.Drawing.Point(165, 561);
+            this.LbAmountOrder.Name = "LbAmountOrder";
+            this.LbAmountOrder.Size = new System.Drawing.Size(16, 17);
+            this.LbAmountOrder.TabIndex = 16;
+            this.LbAmountOrder.Text = "0";
+            // 
+            // BtAdd
+            // 
+            this.BtAdd.Location = new System.Drawing.Point(206, 540);
+            this.BtAdd.Name = "BtAdd";
+            this.BtAdd.Size = new System.Drawing.Size(61, 58);
+            this.BtAdd.TabIndex = 17;
+            this.BtAdd.Text = "+";
+            this.BtAdd.UseVisualStyleBackColor = true;
+            this.BtAdd.Click += new System.EventHandler(this.BtAdd_Click);
+            // 
+            // BtSup
+            // 
+            this.BtSup.Location = new System.Drawing.Point(78, 540);
+            this.BtSup.Name = "BtSup";
+            this.BtSup.Size = new System.Drawing.Size(61, 58);
+            this.BtSup.TabIndex = 18;
+            this.BtSup.Text = "-";
+            this.BtSup.UseVisualStyleBackColor = true;
+            this.BtSup.Click += new System.EventHandler(this.BtSup_Click);
+            // 
+            // LbTotal
+            // 
+            this.LbTotal.AutoSize = true;
+            this.LbTotal.Location = new System.Drawing.Point(93, 644);
+            this.LbTotal.Name = "LbTotal";
+            this.LbTotal.Size = new System.Drawing.Size(40, 17);
+            this.LbTotal.TabIndex = 19;
+            this.LbTotal.Text = "Total";
+            // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 765);
+            this.Controls.Add(this.LbTotal);
+            this.Controls.Add(this.BtSup);
+            this.Controls.Add(this.BtAdd);
+            this.Controls.Add(this.LbAmountOrder);
             this.Controls.Add(this.LbSelecteditemPrice);
             this.Controls.Add(this.LbItemSelected);
             this.Controls.Add(this.LvProducts);
@@ -180,5 +226,9 @@ namespace SmartyCarBasic
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label LbItemSelected;
         private System.Windows.Forms.Label LbSelecteditemPrice;
+        private System.Windows.Forms.Label LbAmountOrder;
+        private System.Windows.Forms.Button BtAdd;
+        private System.Windows.Forms.Button BtSup;
+        private System.Windows.Forms.Label LbTotal;
     }
 }
