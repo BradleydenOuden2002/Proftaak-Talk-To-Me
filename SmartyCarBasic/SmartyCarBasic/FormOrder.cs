@@ -20,7 +20,7 @@ namespace SmartyCarBasic
         private void button4_Click(object sender, EventArgs e)
         {
             FormMain main = new FormMain();
-            main.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void FormOrder_Load(object sender, EventArgs e)
@@ -32,6 +32,18 @@ namespace SmartyCarBasic
                 LvProducts.Items.Add(item);
             }
 
+        }
+
+        private void LvProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (LvProducts.SelectedItems.Count == 0)
+                return;
+
+            var item = LvProducts.SelectedItems[0];
+            var selecteditem = item.Text;
+            var selecteditemprice = item.SubItems[2].Text;
+            LbItemSelected.Text = selecteditem;
+            LbSelecteditemPrice.Text = ("€" + selecteditemprice);
 
         }
     }
