@@ -31,7 +31,7 @@ namespace SmartyCarBasic
         {
             this.button5 = new System.Windows.Forms.Button();
             this.BtOrder = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtMainMenu = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.BtExit = new System.Windows.Forms.Button();
@@ -45,6 +45,7 @@ namespace SmartyCarBasic
             this.BtAdd = new System.Windows.Forms.Button();
             this.BtSup = new System.Windows.Forms.Button();
             this.LbTotal = new System.Windows.Forms.Label();
+            this.BtAddToCart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button5
@@ -55,6 +56,7 @@ namespace SmartyCarBasic
             this.button5.TabIndex = 10;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // BtOrder
             // 
@@ -65,14 +67,15 @@ namespace SmartyCarBasic
             this.BtOrder.Text = "Order";
             this.BtOrder.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtMainMenu
             // 
-            this.button3.Location = new System.Drawing.Point(145, 688);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(65, 65);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtMainMenu.Location = new System.Drawing.Point(145, 688);
+            this.BtMainMenu.Name = "BtMainMenu";
+            this.BtMainMenu.Size = new System.Drawing.Size(65, 65);
+            this.BtMainMenu.TabIndex = 8;
+            this.BtMainMenu.Text = "Home";
+            this.BtMainMenu.UseVisualStyleBackColor = true;
+            this.BtMainMenu.Click += new System.EventHandler(this.BtMainMenu_Click);
             // 
             // button2
             // 
@@ -151,7 +154,7 @@ namespace SmartyCarBasic
             // LbAmountOrder
             // 
             this.LbAmountOrder.AutoSize = true;
-            this.LbAmountOrder.Location = new System.Drawing.Point(165, 561);
+            this.LbAmountOrder.Location = new System.Drawing.Point(112, 557);
             this.LbAmountOrder.Name = "LbAmountOrder";
             this.LbAmountOrder.Size = new System.Drawing.Size(16, 17);
             this.LbAmountOrder.TabIndex = 16;
@@ -159,7 +162,7 @@ namespace SmartyCarBasic
             // 
             // BtAdd
             // 
-            this.BtAdd.Location = new System.Drawing.Point(206, 540);
+            this.BtAdd.Location = new System.Drawing.Point(153, 536);
             this.BtAdd.Name = "BtAdd";
             this.BtAdd.Size = new System.Drawing.Size(61, 58);
             this.BtAdd.TabIndex = 17;
@@ -169,7 +172,7 @@ namespace SmartyCarBasic
             // 
             // BtSup
             // 
-            this.BtSup.Location = new System.Drawing.Point(78, 540);
+            this.BtSup.Location = new System.Drawing.Point(25, 536);
             this.BtSup.Name = "BtSup";
             this.BtSup.Size = new System.Drawing.Size(61, 58);
             this.BtSup.TabIndex = 18;
@@ -180,17 +183,28 @@ namespace SmartyCarBasic
             // LbTotal
             // 
             this.LbTotal.AutoSize = true;
-            this.LbTotal.Location = new System.Drawing.Point(93, 644);
+            this.LbTotal.Location = new System.Drawing.Point(230, 536);
             this.LbTotal.Name = "LbTotal";
             this.LbTotal.Size = new System.Drawing.Size(40, 17);
             this.LbTotal.TabIndex = 19;
             this.LbTotal.Text = "Total";
+            // 
+            // BtAddToCart
+            // 
+            this.BtAddToCart.Location = new System.Drawing.Point(25, 616);
+            this.BtAddToCart.Name = "BtAddToCart";
+            this.BtAddToCart.Size = new System.Drawing.Size(189, 40);
+            this.BtAddToCart.TabIndex = 20;
+            this.BtAddToCart.Text = "Add to Cart";
+            this.BtAddToCart.UseVisualStyleBackColor = true;
+            this.BtAddToCart.Click += new System.EventHandler(this.BtAddToCart_Click);
             // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 765);
+            this.Controls.Add(this.BtAddToCart);
             this.Controls.Add(this.LbTotal);
             this.Controls.Add(this.BtSup);
             this.Controls.Add(this.BtAdd);
@@ -201,7 +215,7 @@ namespace SmartyCarBasic
             this.Controls.Add(this.BtExit);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.BtOrder);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BtMainMenu);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "FormOrder";
@@ -216,7 +230,7 @@ namespace SmartyCarBasic
 
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button BtOrder;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtMainMenu;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtExit;
@@ -230,5 +244,6 @@ namespace SmartyCarBasic
         private System.Windows.Forms.Button BtAdd;
         private System.Windows.Forms.Button BtSup;
         private System.Windows.Forms.Label LbTotal;
+        private System.Windows.Forms.Button BtAddToCart;
     }
 }

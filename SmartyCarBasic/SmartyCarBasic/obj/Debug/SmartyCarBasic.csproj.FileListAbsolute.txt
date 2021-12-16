@@ -66,3 +66,4 @@ C:\Users\bradl\OneDrive\Bureaublad\Proftaak Talk to me\Proftaak-Talk-To-Me\Smart
 C:\Users\bradl\OneDrive\Bureaublad\Proftaak Talk to me\Proftaak-Talk-To-Me\SmartyCarBasic\SmartyCarBasic\obj\Debug\SmartyCarBasic.csproj.CopyComplete
 C:\Users\bradl\OneDrive\Bureaublad\Proftaak Talk to me\Proftaak-Talk-To-Me\SmartyCarBasic\SmartyCarBasic\obj\Debug\SmartyCarBasic.exe
 C:\Users\bradl\OneDrive\Bureaublad\Proftaak Talk to me\Proftaak-Talk-To-Me\SmartyCarBasic\SmartyCarBasic\obj\Debug\SmartyCarBasic.pdb
+C:\Users\bradl\OneDrive\Bureaublad\Proftaak Talk to me\Proftaak-Talk-To-Me\SmartyCarBasic\SmartyCarBasic\obj\Debug\SmartyCarBasic.FormShoppingCart.resources

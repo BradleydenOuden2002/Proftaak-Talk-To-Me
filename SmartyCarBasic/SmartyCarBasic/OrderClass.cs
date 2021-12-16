@@ -13,8 +13,8 @@ namespace SmartyCarBasic
         private string connectionString = "datasource=studmysql01.fhict.local;username=dbi486810;password=7653@Ajc;database=dbi486810;";
         public List<ListViewItem> Product()
         {
-            string query = "SELECT * FROM products";
             List<ListViewItem> product = new List<ListViewItem>();
+            string query = "SELECT * FROM products";
             
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
@@ -36,7 +36,7 @@ namespace SmartyCarBasic
             databaseConnection.Close();
             return product;
         }
-        public double PriceCal(int AmountOrder, double selecteditempricedouble)
+        public double PriceCal(int AmountOrder, double selecteditempricedouble, string selecteditem)
         {
             double total = AmountOrder * selecteditempricedouble;
             return total;

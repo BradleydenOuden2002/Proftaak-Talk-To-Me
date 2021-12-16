@@ -19,7 +19,7 @@ namespace SmartyCarBasic
 
         private void BtExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void BtOrder_Click(object sender, EventArgs e)
@@ -31,12 +31,12 @@ namespace SmartyCarBasic
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,6 +47,10 @@ namespace SmartyCarBasic
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
         }
     }
 }

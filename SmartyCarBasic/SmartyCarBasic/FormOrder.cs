@@ -13,9 +13,11 @@ namespace SmartyCarBasic
     public partial class FormOrder : Form
     {
         OrderClass order = new OrderClass();
+        ShoppingCartClass cart = new ShoppingCartClass();
         int AmountOrder;
         string selecteditem;
         string selecteditemprice;
+        double total;
         public FormOrder()
         {
             InitializeComponent();
@@ -23,7 +25,6 @@ namespace SmartyCarBasic
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormMain main = new FormMain();
             System.Windows.Forms.Application.Exit();
         }
 
@@ -73,7 +74,25 @@ namespace SmartyCarBasic
         private void PriceCal(int AmountOrder, string selecteditemprice, string selecteditem)
         {
             double selecteditempricedouble = Convert.ToDouble(selecteditemprice);
-            LbTotal.Text = ("Total: " + order.PriceCal(AmountOrder, selecteditempricedouble));
+            total = order.PriceCal(AmountOrder, selecteditempricedouble, selecteditem);
+            LbTotal.Text = "total: " + total;
+        }
+
+        private void BtMainMenu_Click(object sender, EventArgs e)
+        {
+            FormMain main = new FormMain();
+            main.Show();
+            this.Close();
+        }
+
+        private void BtAddToCart_Click(object sender, EventArgs e)
+        {
+            cart.ShoppingList(AmountOrder, selecteditemprice, selecteditem, total);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            cart.OpenShoppingCartForm();
         }
     }
 }
